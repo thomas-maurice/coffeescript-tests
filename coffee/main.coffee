@@ -21,7 +21,7 @@ $ -> # Initialization code for jquery
             url: '/'
             data: {'glu': 'glu'}
             dataType: 'json'
-            success: (data, status, jqxhr) ->
+            success: (data, status) ->
                 $('#postresult').html "Result = " + JSON.stringify data
                 $('#cmpresult').html if data.value > 50
                         "Greater than 50"
