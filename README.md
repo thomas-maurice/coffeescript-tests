@@ -6,10 +6,8 @@ how to integrate it with jQuery for example
 You have to have bower and grunt installed :
     npm install -g grunt-cli bower
 
-Then install the npm dependencies
-    npm install
+Then install the npm dependencies `npm install`
 
-Then the bower ones
-    bower install
+Then the bower ones `bower install`
 
 To compile the project run `grunt` and to run it : `grunt deploy`
