@@ -15,4 +15,9 @@ app.get("/", function(req, res) {
     res.render('index', {});
 });
 
+app.post("/", function(req, res) {
+    console.log("received post")
+    res.end('{"test": "value1", "test2": "value2"}');
+});
+
 app.listen(8080, console.log("server ready"));

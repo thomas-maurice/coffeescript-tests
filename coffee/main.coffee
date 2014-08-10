@@ -10,3 +10,14 @@ $ -> # Initialization code for jquery
     $('#hitlink').click ->
         console.log "Hit !"
         hitlink()
+    
+    # How to perform an ajax call
+    $('#postlink').click ->
+        console.log "Posting to /"
+        $.ajax
+            type: "POST"
+            url: '/'
+            data: {'glu': 'glu'}
+            dataType: 'json'
+            success: (data, status, jqxhr) ->
+                $('#postresult').html JSON.stringify data
