@@ -2,6 +2,18 @@ module.exports = function(grunt) {
 
   // Grunt config
   grunt.initConfig({
+    copy: {
+        main: {
+            files: [
+                {
+                    expand: true,
+                    cwd: 'bower_components/jquery/dist',
+                    src: ['jquery.min.js'],
+                    dest: 'public/static/js'
+                },
+            ]
+        }
+    },
     coffee: {
         compile: {
             files: {
@@ -10,9 +22,9 @@ module.exports = function(grunt) {
         }
     },
     clean: {
-      build: [
-          'public/static/js/main.js'
-      ],
+        build: [
+            'public'
+        ],
     },
     // Allows to deploy the app
     run: {
@@ -31,9 +43,10 @@ module.exports = function(grunt) {
   // Loads the grunt tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-run');
   
   // Task definition
-  grunt.registerTask('default', ['coffee'])
+  grunt.registerTask('default', ['copy', 'coffee'])
   grunt.registerTask('deploy', ['default', 'run:deploy'])
 }

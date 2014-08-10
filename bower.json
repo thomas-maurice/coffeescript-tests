@@ -1,0 +1,8 @@
+{
+  "name": "coffeescript-tests",
+  "author": "svartbergtroll <tmaurice59@gmail.com>",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
