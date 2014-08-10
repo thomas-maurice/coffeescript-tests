@@ -13,6 +13,7 @@
         <!-- Specific CSS -->
         
         <!-- Javascript -->
+        <script src="/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/main.js"></script>
     </head>
@@ -25,6 +26,9 @@
         <p>
             Hit <a href="javascript:void(0);" id='postlink'>this</a> to post ! <span id='postresult'></span>
             <span id="cmpresult"></span> 
+        </p>
+        <p>
+            Websocket random value : <span id='wsrand'></span>
         </p>
     </body>
 </html>

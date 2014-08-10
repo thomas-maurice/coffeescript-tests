@@ -1,5 +1,7 @@
 hitcount = 0;
 
+socket = io.connect("127.0.0.1:8080")
+
 hitlink = ->
     hitcount = hitcount + 1
     $('#hitcount').html hitcount
@@ -27,3 +29,11 @@ $ -> # Initialization code for jquery
                         "Equals 50"
                     else
                         "Lower than 50"
+    
+    setInterval ->
+            socket.emit "random"
+        ,1000
+    
+    socket.on "number", (num) ->
+        $('#wsrand').html(num);
+        
