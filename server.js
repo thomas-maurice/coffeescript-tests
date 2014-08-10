@@ -16,8 +16,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-    console.log("received post")
-    res.end('{"test": "value1", "test2": "value2"}');
+    res.end('{"value": "'+Math.round(Math.random()*100)+'"}');
 });
 
 app.listen(8080, console.log("server ready"));
