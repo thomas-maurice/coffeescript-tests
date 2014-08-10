@@ -1,0 +1,14 @@
+{
+    "name": "coffeescript-tests",
+    "version": "0.0.1",
+    "author": "svartbergtroll <tmaurice59@gmail.com>",
+    "description": "Small coffeescript tests",
+    "dependencies": {
+        "coffee-script": "~1.7.1",
+        "express": "~4.8.2",
+        "swig": "~1.4.2",
+        "grunt": "~0.4.5",
+        "grunt-contrib-clean": "~0.6.0",
+        "grunt-run": "~0.2.2"
+    }
+}
